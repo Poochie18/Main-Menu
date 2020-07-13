@@ -46,7 +46,7 @@ public class SceneMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("ExitFromGame");
-        //Application.Quit();
+        //Debug.Log("ExitFromGame");
+        Application.Quit();
     }
 }

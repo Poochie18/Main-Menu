@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public void ExitPressed()
     {
-        Debug.Log("Exit");
-        //Application.Quit();
+        //Debug.Log("Exit");
+        Application.Quit();
     }
 }
