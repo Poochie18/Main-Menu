@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - MainMenu
     - SceneMenu
+    - SettingsMenu
+    - SoundManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -28,9 +30,15 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -58,21 +66,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11246}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 12876}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 11518}
     - Class: 114
-      Script: {instanceID: 14246}
+      Script: {instanceID: 12008}
+    - Class: 114
+      Script: {instanceID: 12180}
+    - Class: 114
+      Script: {instanceID: 12530}
+    - Class: 114
+      Script: {instanceID: 13640}
+    - Class: 114
+      Script: {instanceID: 14132}
+    - Class: 114
+      Script: {instanceID: 14220}
+    - Class: 114
+      Script: {instanceID: 14252}
+    - Class: 114
+      Script: {instanceID: 14272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -106,24 +128,44 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 12208}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 12876}
+      Script: {instanceID: 11518}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 12008}
     - Class: 114
-      Script: {instanceID: 14246}
+      Script: {instanceID: 12180}
+    - Class: 114
+      Script: {instanceID: 12212}
+    - Class: 114
+      Script: {instanceID: 12530}
+    - Class: 114
+      Script: {instanceID: 13640}
+    - Class: 114
+      Script: {instanceID: 14132}
+    - Class: 114
+      Script: {instanceID: 14220}
+    - Class: 114
+      Script: {instanceID: 14252}
+    - Class: 114
+      Script: {instanceID: 14272}
+    - Class: 114
+      Script: {instanceID: 32272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -141,6 +183,18 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 7072231382eb3c4871b3dd75ad0227e1
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -167,7 +221,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 79370d317b27c59548b163280d4837e0
+      Hash: 41b03014a7ca46801ffb772a96cc14c1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneMenu
@@ -365,7 +419,7 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: bcd2559ce855fdd5999a9c35d0c1b879
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -429,12 +483,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
@@ -569,6 +617,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 726815c991f82e85dfe6bfd37a700a59
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsMenu
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -623,12 +677,6 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 7072231382eb3c4871b3dd75ad0227e1
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Slider
-  - hash:
-      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -639,8 +687,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: D:/Repository/Main-Menu/Builds/Build 0.0.1/MainMenu.exe
+  playerPath: D:/Repository/Main-Menu/test_builds/Build 0.0.2/MainMenu.exe
