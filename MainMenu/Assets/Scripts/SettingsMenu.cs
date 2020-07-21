@@ -15,7 +15,7 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] res;
     private bool muteSound = false;
-    public float tempVolume;
+    public float tempVolume ;
     public Dropdown dropdown;
 
     void Awake()
@@ -30,7 +30,8 @@ public class SettingsMenu : MonoBehaviour
         }
         dropdown.ClearOptions();
         dropdown.AddOptions(strRes.ToList());
-        Screen.SetResolution(1920, 1080, Screen.fullScreen, 60);
+        Screen.SetResolution(1280, 720, Screen.fullScreen, 60);
+        slider.value = SoundManager.instance.volumeLvl;
     }
 
    public void SetRes()
@@ -40,7 +41,6 @@ public class SettingsMenu : MonoBehaviour
 
     public void FullScreenToggle()
     {
-        print(toggle.isOn);
         Screen.fullScreen = toggle.isOn;
     }
 
@@ -64,8 +64,12 @@ public class SettingsMenu : MonoBehaviour
     public void SoundVolume(float volume)
     {
         slider.value = volume;
+        if(slider.value == 0)
+            muteButton.GetComponentInChildren<Text>().text = "X";
+        else
+            muteButton.GetComponentInChildren<Text>().text = " ";
         valueCount.text = (Math.Round(volume * 100)).ToString();
-        AudioListener.volume = volume;
+        SoundManager.instance.SoundVolume(volume);
     }
 
     private void Update()

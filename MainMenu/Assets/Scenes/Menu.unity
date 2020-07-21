@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 1807072799}
   - component: {fileID: 1807072801}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,7 +873,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -981,6 +981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d698404f84188af44922b2ae725eef20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 1807072799}
+  volumeLvl: 0
 --- !u!1 &1913583361 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6686789297274640840, guid: 48258d6a2f06a7e4c98b5fa03f1cc8f5,
